@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class Detect : MonoBehaviour
 {
-    
-   
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -17,10 +15,9 @@ public class SpawnManager : MonoBehaviour
     {
         
     }
-
-    void SpawnRandomAnimal()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
-
 }
